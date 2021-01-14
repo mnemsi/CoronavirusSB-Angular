@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LocationStatServiceService } from './location-stat-service.service';
+import { LocationStatServiceService } from './location-stat.service';
 
 describe('LocationStatServiceService', () => {
   let service: LocationStatServiceService;

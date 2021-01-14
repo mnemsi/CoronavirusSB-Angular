@@ -5,7 +5,7 @@ import { LocationStatsListComponent } from './location-stats-list/location-stats
 
 const routes: Routes = [
 {path:'', component : LocationStatsListComponent},
-{ path: 'dashboard', component: DashboardComponent }
+{path: 'dashboard', component: DashboardComponent }
 ];
 
 @NgModule({

@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TotalCases {
-    private  Integer totalGlobalCases;
-    private Integer totalNewCases;
+    private int totalGlobalCases;
+    private int totalNewCases;
 }

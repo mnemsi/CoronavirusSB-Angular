@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { LocationStatServiceService } from '../location-stat-service.service';
+import { LocationStatServiceService } from '../location-stat.service';
+import { LocationStat } from '../model/location-stat';
 import { LocationTotalStat } from '../model/location-total-stat'
 
 @Component({
@@ -11,22 +11,26 @@ import { LocationTotalStat } from '../model/location-total-stat'
 })
 export class DashboardComponent implements OnInit {
 
-  totalStat: LocationTotalStat = new LocationTotalStat ;
+  totalStat : LocationTotalStat = new LocationTotalStat() ;
 
-  constructor(private locationService:LocationStatServiceService, private router: Router) { 
+
+  constructor(private locationStatService:LocationStatServiceService, private router: Router) { 
 
   }
 
   ngOnInit(): void {
-    this.getAllStats;
-    console.log(this.totalStat.totalGlobalCases)
+    this.getAllStats();
+    console.log(this.totalStat.totalGlobalCases);
   }
 
   getAllStats(){
-    return this.locationService.findTotalAll().subscribe(data => { this.totalStat = data, error => console.log(error)});
+    this.locationStatService.findTotalAll().subscribe(data => {this.totalStat = data});
   }
 
+  
   returnToHome(){
     this.router.navigate(['']);
   }
+  
+
 }

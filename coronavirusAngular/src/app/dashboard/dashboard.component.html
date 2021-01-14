@@ -1,11 +1,10 @@
-<div class="container">
-
-    <p>Total cases: </p>
-    <ul>
-        <li>{{totalStat.totalGlobalCases}}</li>
-        <li>{{totalStat.totalNewCases}}</li>
-    </ul>
-    <hr>
-    <button class="btn btn-info" (click)="returnToHome()">Return</button>
-
+<hr>
+<div class="card">
+    <div class="card-body">
+        <ul>
+            <li>Total Globle Cases:    <span style="color: red;">{{ totalStat.totalGlobalCases }}</span> </li>
+            <li>Total Globe New Cases: <span style="color: red;">{{ totalStat.totalNewCases }} </span></li>
+        </ul>
+        <button class="btn btn-light" (click)="returnToHome()">Home</button>
+    </div>
 </div>

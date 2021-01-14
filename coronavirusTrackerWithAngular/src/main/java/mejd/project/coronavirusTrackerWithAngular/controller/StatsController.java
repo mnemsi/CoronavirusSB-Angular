@@ -31,7 +31,7 @@ public class StatsController {
         return dataService.getStats();
     }
 
-    @GetMapping("/totalStats")
+    @GetMapping("/totalstats")
     public TotalCases getTotalStats(){
         TotalCases totalCases = new TotalCases();
         List<LocationStats> allStats = dataService.getStats();

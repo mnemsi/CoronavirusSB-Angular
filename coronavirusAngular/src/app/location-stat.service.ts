@@ -13,7 +13,7 @@ export class LocationStatServiceService {
 
   constructor(private httpClient: HttpClient) { 
     this.locationStatURL="http://localhost:8080/api/v1/stats";
-    this.locationTotalStatURL = "http://localhost:8080/api/v1/totalStats";
+    this.locationTotalStatURL = "http://localhost:8080/api/v1/totalstats";
   }
 
   public findAll():Observable<LocationStat[]> {

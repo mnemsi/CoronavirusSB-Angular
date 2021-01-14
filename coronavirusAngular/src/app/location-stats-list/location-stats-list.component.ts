@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LocationStatServiceService } from '../location-stat-service.service';
+import { LocationStatServiceService } from '../location-stat.service';
 import { LocationStat } from '../model/location-stat'
 
 @Component({
@@ -24,7 +24,5 @@ export class LocationStatsListComponent implements OnInit {
   getStats(){
     this.locationService.findAll().subscribe(data => {this.locationStats = data});
   }
-
-
 
 }
