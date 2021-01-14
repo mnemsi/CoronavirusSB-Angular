@@ -19,15 +19,12 @@ export class LocationStatsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getStats();
-   // this.gotoStatsList
   }
 
   getStats(){
     this.locationService.findAll().subscribe(data => {this.locationStats = data});
   }
 
-/*   gotoStatsList() {
-    this.router.navigate(['/stats']);
-  }*/
+
 
 }

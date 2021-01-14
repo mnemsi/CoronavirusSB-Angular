@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 
 // search module
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -17,6 +18,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
   declarations: [
     AppComponent,
     LocationStatsListComponent,
+    DashboardComponent,
 
     
   
@@ -30,7 +32,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     Ng2SearchPipeModule
     
   ],
-  providers: [LocationStatServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

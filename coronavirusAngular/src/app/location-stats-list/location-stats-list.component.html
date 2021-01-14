@@ -1,6 +1,6 @@
 <div class="container">
     <div class="input-group ">
-        <input class="form-control"  type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching by any field">
+        <input class="form-control"  type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search">
         
     </div>
     <br>
@@ -18,7 +18,7 @@
             <td>{{location.state}}</td>
             <td>{{location.country}}</td>
             <td>{{location.latestTotalCases}}</td>
-            <td>{{location.newCases}}</td>
+            <td style="color: red;">{{location.newCases}}</td>
         </tr>
     </tbody>
 </table>
