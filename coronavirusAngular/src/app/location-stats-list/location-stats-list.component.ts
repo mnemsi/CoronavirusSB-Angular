@@ -7,11 +7,13 @@ import { LocationStat } from '../model/location-stat'
   selector: 'app-location-stats-list',
   templateUrl: './location-stats-list.component.html',
   styleUrls: ['./location-stats-list.component.css']
-  providers
+  
 })
 export class LocationStatsListComponent implements OnInit {
 
   locationStats : LocationStat[];
+  searchText;
+  
 
   constructor(private locationService: LocationStatServiceService, private router:Router) { }
 

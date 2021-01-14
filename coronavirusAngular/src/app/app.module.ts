@@ -6,22 +6,28 @@ import { AppComponent } from './app.component';
 import { LocationStatsListComponent } from './location-stats-list/location-stats-list.component';
 import { LocationStatServiceService } from './location-stat-service.service';
 import {HttpClientModule} from '@angular/common/http';
-import { DatePipe } from '@angular/common';
-import { AngularpipeComponent } from './angularpipe/angularpipe.component';
+import { FormsModule } from '@angular/forms';
+
+// search module
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LocationStatsListComponent,
-    AngularpipeComponent,
+
     
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserModule, 
+    FormsModule, 
+    Ng2SearchPipeModule
     
   ],
   providers: [LocationStatServiceService],
